@@ -13,7 +13,7 @@ services:
     working_dir: /usr/app
     command: npm start
     volumes:
-      - .:/usr/app
+      - ./node:/usr/app
 
   nginx:
     image: nginx:1.25
