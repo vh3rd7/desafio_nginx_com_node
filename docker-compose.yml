@@ -10,6 +10,13 @@ services:
 
   node:
     image: node:21.3
+    working_dir: /usr/app
+    command: npm start
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/app
+    
 
   nginx:
     image: nginx:1.25
