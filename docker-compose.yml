@@ -7,6 +7,9 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: dbase
+    volumes:
+      - ./mysql:/var/lib/mysql
 
   node:
     image: node:21.3
